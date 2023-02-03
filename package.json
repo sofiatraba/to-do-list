@@ -1,19 +1,23 @@
 {
   "name": "to-do-list",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Aesthetic simple to-do list",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
+    "server": "node server/server.js",
+    "client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sofiatraba/to-do-list.git"
   },
-  "author": "",
+  "author": "Sofia Traba Mendez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sofiatraba/to-do-list/issues"
   },
-  "homepage": "https://github.com/sofiatraba/to-do-list#readme"
+  "homepage": "https://github.com/sofiatraba/to-do-list#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  }
 }
